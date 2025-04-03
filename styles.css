@@ -1,0 +1,44 @@
+/* Custom styles to complement Tailwind */
+.color-box {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.color-box:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.palette-type-btn.active {
+    background-color: #4f46e5;
+    color: white;
+}
+
+/* Animation for color change */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.color-box {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Tooltip for copy feedback */
+.tooltip {
+    position: absolute;
+    background: #333;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.tooltip.show {
+    opacity: 1;
+}

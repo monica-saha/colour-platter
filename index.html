@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Color Palette Generator</h1>
+            <p class="text-gray-600">Click the button to generate beautiful color schemes</p>
+        </header>
+
+        <div class="flex justify-center mb-12">
+            <button id="generateBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all transform hover:scale-105">
+                Generate Palette
+            </button>
+        </div>
+
+        <div id="paletteContainer" class="grid grid-cols-1 md:grid-cols-5 gap-4 mb-12">
+            <!-- Palette colors will be generated here -->
+            <div class="text-center">
+                <div class="color-box h-64 rounded-lg shadow-md mb-2"></div>
+                <div class="hex-code font-mono text-lg font-semibold">#FFFFFF</div>
+                <button class="copy-btn mt-2 bg-gray-200 hover:bg-gray-300 text-gray-800 py-1 px-3 rounded text-sm transition">Copy</button>
+            </div>
+            <!-- 4 more color boxes will be added by JavaScript -->
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button id="complementaryBtn" class="palette-type-btn bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded">
+                Complementary
+            </button>
+            <button id="analogousBtn" class="palette-type-btn bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded">
+                Analogous
+            </button>
+            <button id="triadicBtn" class="palette-type-btn bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded">
+                Triadic
+            </button>
+            <button id="monochromaticBtn" class="palette-type-btn bg-gray-200 hover:bg-gray-300 text-gray-800 py-2 px-4 rounded">
+                Monochromatic
+            </button>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md p-6 max-w-2xl mx-auto">
+            <h2 class="text-xl font-semibold mb-4">How to use</h2>
+            <ol class="list-decimal pl-5 space-y-2 text-gray-700">
+                <li>Click "Generate Palette" to create a random color scheme</li>
+                <li>Choose a palette type (complementary, analogous, etc.)</li>
+                <li>Click on any color's "Copy" button to copy its hex code</li>
+                <li>Use these colors in your design projects!</li>
+            </ol>
+        </div>
+    </div>
+
+    <footer class="text-center py-6 text-gray-500 text-sm">
+        Created with HTML, CSS & JavaScript
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
